@@ -1,2 +1,4 @@
-# Symfony-VDM
-Projet pour Sup'internet - VDM
+Symfony-VDM
+===========
+
+A Symfony project created on May 17, 2016, 1:06 pm.
