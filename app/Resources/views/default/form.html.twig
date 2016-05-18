@@ -1,0 +1,11 @@
+{% extends 'default/index.html.twig' %}
+
+{% block container %}
+  <div class="status-post"></div>
+  <form method="POST" name="vdm">
+    <input type="text" class="input input-pseudo" placeholder="Votre pseudo" name="champ-pseudo">
+    <input type="text" class="input input-title" placeholder="Titre de la VDM" name="champ-titre">
+    <textarea type="text" class="input input-content" placeholder="Contenu" rows="4" name="champ-content"></textarea>
+    <input type="submit" value="Poster une VDM" id="butn-submit">
+  </form>
+{% endblock %}
