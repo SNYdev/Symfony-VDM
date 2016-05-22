@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block container %}
+  {% for advert in floplist %}
+    <div class="jumbotron">
+      <h1>{{ advert.titre }}</h1>
+      <h2>{{ advert.pseudo }}</h2>
+      <p>{{ advert.content }}</p>
+      <div class="col-md-8">
+        <div class="col-md-2 result" id="rdislike" style="color:red">{{ advert.unliketicket }}</div>
+        <div class="col-md-2 result" id="rlike" style="color:green">{{ advert.liketicket }}</div>
+        <div class="col-md-4">
+        <form method="POST">
+          <input type="submit" name="bdislike" id="btn-dislike" class="btn btn-danger" value="J'aime pas">
+          <input type="submit" name="blike" id="btn-like" class="btn btn-success" value="J'aime">
+        </form>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+{% endblock %}

@@ -8,6 +8,7 @@
            <li><a href="{{ path('homepage') }}">#VDM</a></li>
            <li><a href="form">Ajouter une VDM</a></li>
            <li><a href="{{ path('top30') }}">Top 30</a></li>
+           <li><a href="{{ path('flop30') }}">Flop 30</a></li>
         </ul>
       </div>
     </nav>
@@ -23,8 +24,10 @@
           <div class="col-md-2 result" id="rdislike" style="color:red">{{ advert.unliketicket }}</div>
           <div class="col-md-2 result" id="rlike" style="color:green">{{ advert.liketicket }}</div>
           <div class="col-md-4">
-            <button type="button" class="btn btn-danger">J'aime pas</button>
-            <button type="button" class="btn btn-success">J'aime</button>
+          <form method="POST">
+            <input type="submit" name="bdislike" id="btn-dislike" class="btn btn-danger" value="J'aime pas">
+            <input type="submit" name="blike" id="btn-like" class="btn btn-success" value="J'aime">
+            </form>
           </div>
         </div>
       </div>

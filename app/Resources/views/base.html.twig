@@ -8,7 +8,10 @@
         <link rel='stylesheet' type='text/css' href="{{ asset('css/bootstrap.min.css') }}">
         <link rel='stylesheet' type='text/css' href="{{ asset('css/style.css') }}">
         {% endblock %}
+
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <script type="text/javascript" src="{{ asset('js/jquery-1.12.3.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/script.js') }}"></script>
     </head>
     <body>
         {% block body %}
@@ -19,6 +22,7 @@
                    <li><a href="{{ path('homepage') }}">#VDM</a></li>
                    <li><a href="form">Ajouter une VDM</a></li>
                    <li><a href="{{ path('top30') }}">Top 30</a></li>
+                   <li><a href="{{ path('flop30') }}">Flop 30</a></li>
                 </ul>
               </div>
             </nav>

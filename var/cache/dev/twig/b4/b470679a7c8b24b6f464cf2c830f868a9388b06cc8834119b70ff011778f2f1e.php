@@ -21,20 +21,20 @@ class __TwigTemplate_1f166f955d08ac0746b58a3a85670e939979647a3121eb6ed92cb5137d6
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_9f40173443a40ff9c3a79642ad487247546d9ddc849cf120617bad0c91a54d19 = $this->env->getExtension("native_profiler");
-        $__internal_9f40173443a40ff9c3a79642ad487247546d9ddc849cf120617bad0c91a54d19->enter($__internal_9f40173443a40ff9c3a79642ad487247546d9ddc849cf120617bad0c91a54d19_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/best.html.twig"));
+        $__internal_b7a560a3e07cd490d3b3b20711fafef942503e7ca0f34845b68d85b340488dff = $this->env->getExtension("native_profiler");
+        $__internal_b7a560a3e07cd490d3b3b20711fafef942503e7ca0f34845b68d85b340488dff->enter($__internal_b7a560a3e07cd490d3b3b20711fafef942503e7ca0f34845b68d85b340488dff_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/best.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_9f40173443a40ff9c3a79642ad487247546d9ddc849cf120617bad0c91a54d19->leave($__internal_9f40173443a40ff9c3a79642ad487247546d9ddc849cf120617bad0c91a54d19_prof);
+        $__internal_b7a560a3e07cd490d3b3b20711fafef942503e7ca0f34845b68d85b340488dff->leave($__internal_b7a560a3e07cd490d3b3b20711fafef942503e7ca0f34845b68d85b340488dff_prof);
 
     }
 
     // line 3
     public function block_container($context, array $blocks = array())
     {
-        $__internal_ef71cea6250c931253357f76f8ce19644cc678397e93f488d32001b9e80e1e30 = $this->env->getExtension("native_profiler");
-        $__internal_ef71cea6250c931253357f76f8ce19644cc678397e93f488d32001b9e80e1e30->enter($__internal_ef71cea6250c931253357f76f8ce19644cc678397e93f488d32001b9e80e1e30_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "container"));
+        $__internal_4a0e73566c422f15ef644e75af5f5eded137fd0411220b386a979999f9d83982 = $this->env->getExtension("native_profiler");
+        $__internal_4a0e73566c422f15ef644e75af5f5eded137fd0411220b386a979999f9d83982->enter($__internal_4a0e73566c422f15ef644e75af5f5eded137fd0411220b386a979999f9d83982_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "container"));
 
         // line 4
         echo "  ";
@@ -65,8 +65,10 @@ class __TwigTemplate_1f166f955d08ac0746b58a3a85670e939979647a3121eb6ed92cb5137d6
             echo twig_escape_filter($this->env, $this->getAttribute($context["advert"], "liketicket", array()), "html", null, true);
             echo "</div>
         <div class=\"col-md-4\">
-          <button type=\"button\" class=\"btn btn-danger\">J'aime pas</button>
-          <button type=\"button\" class=\"btn btn-success\">J'aime</button>
+        <form method=\"POST\">
+          <input type=\"submit\" name=\"bdislike\" id=\"btn-dislike\" class=\"btn btn-danger\" value=\"J'aime pas\">
+          <input type=\"submit\" name=\"blike\" id=\"btn-like\" class=\"btn btn-success\" value=\"J'aime\">
+        </form>
         </div>
       </div>
     </div>
@@ -76,7 +78,7 @@ class __TwigTemplate_1f166f955d08ac0746b58a3a85670e939979647a3121eb6ed92cb5137d6
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['advert'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         
-        $__internal_ef71cea6250c931253357f76f8ce19644cc678397e93f488d32001b9e80e1e30->leave($__internal_ef71cea6250c931253357f76f8ce19644cc678397e93f488d32001b9e80e1e30_prof);
+        $__internal_4a0e73566c422f15ef644e75af5f5eded137fd0411220b386a979999f9d83982->leave($__internal_4a0e73566c422f15ef644e75af5f5eded137fd0411220b386a979999f9d83982_prof);
 
     }
 
@@ -104,11 +106,13 @@ class __TwigTemplate_1f166f955d08ac0746b58a3a85670e939979647a3121eb6ed92cb5137d6
 /*       <h2>{{ advert.pseudo }}</h2>*/
 /*       <p>{{ advert.content }}</p>*/
 /*       <div class="col-md-8">*/
-/*         <div class="col-md-2 result" id="rdislike" style="color:red">{{ advert.unliketicket}}</div>*/
-/*         <div class="col-md-2 result" id="rlike" style="color:green">{{ advert.liketicket}}</div>*/
+/*         <div class="col-md-2 result" id="rdislike" style="color:red">{{ advert.unliketicket }}</div>*/
+/*         <div class="col-md-2 result" id="rlike" style="color:green">{{ advert.liketicket }}</div>*/
 /*         <div class="col-md-4">*/
-/*           <button type="button" class="btn btn-danger">J'aime pas</button>*/
-/*           <button type="button" class="btn btn-success">J'aime</button>*/
+/*         <form method="POST">*/
+/*           <input type="submit" name="bdislike" id="btn-dislike" class="btn btn-danger" value="J'aime pas">*/
+/*           <input type="submit" name="blike" id="btn-like" class="btn btn-success" value="J'aime">*/
+/*         </form>*/
 /*         </div>*/
 /*       </div>*/
 /*     </div>*/
