@@ -31,18 +31,12 @@ class FormController extends Controller
               $tickets->setPseudo($pseudo);
               $tickets->setTitre($titre);
               $tickets->setContent($content);
-              $tickets->setLiketicket(0);
+              $tickets->setLiketicket(100);
               $tickets->setUnliketicket(0);
 
               $em = $this->getDoctrine()->getManager();
               $em->persist($tickets);
               $em->flush();
-
-              // return $this->render('', array(
-              //   "id" => $tickets->getId(),
-              //   "pseudo" => $tickets->getPseudo(),
-              //   "test" => var_dump($_POST)
-              // ));
             }
         }
       return $this->render('default/form.html.twig');
